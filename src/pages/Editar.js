@@ -47,7 +47,7 @@ function Editar({ navigation }) {
     function customAlert(message, alert) {
         return (
             <View style={{ marginTop: 10 }}>
-                <CustomAlert message={message} alert={alert} />
+                <CustomAlert alert={alert}>{message}</CustomAlert>
             </View>
         );
     }
@@ -107,7 +107,7 @@ function Editar({ navigation }) {
             </View>
             {mensagem}
             <View style={btAtualizar.view}>
-                <MyButton text='Atualizar' color='success' onPress={() => atualizar()} disabled={atualizando || !nome || !telefone || !email} />
+                <MyButton color='success' onPress={() => atualizar()} disabled={atualizando || !nome || !telefone || !email}>Atualizar</MyButton>
             </View>
         </SafeAreaView>
     );

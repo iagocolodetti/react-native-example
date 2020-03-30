@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 function CustomAlert(props) {
-    const { message, alert } = props;
+    const { children, alert } = props;
 
     function getBackgroundColor(alert) {
         switch(alert) {
@@ -57,7 +57,7 @@ function CustomAlert(props) {
 
     return (
         <View style={styles.view}>
-            <Text style={styles.text}>{message}</Text>
+            <Text style={styles.text}>{children}</Text>
         </View>
     );
 }

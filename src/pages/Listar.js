@@ -61,7 +61,7 @@ function Listar({ navigation }) {
     function customAlert(message, alert) {
         return (
             <View style={{ marginTop: 10 }}>
-                <CustomAlert message={message} alert={alert} />
+                <CustomAlert alert={alert}>{message}</CustomAlert>
             </View>
         );
     }
@@ -73,9 +73,9 @@ function Listar({ navigation }) {
                 <Text style={flatListStyles.telefone}>{contato.telefone}</Text>
                 <Text style={flatListStyles.email}>{contato.email}</Text>
                 <View style={flatListStyles.btsView}>
-                    <MyButton text='Editar' color='primary' size='small' onPress={() => handleAtualizar(contato)} />
+                    <MyButton color='primary' size='small' onPress={() => handleAtualizar(contato)}>Editar</MyButton>
                     <View style={{ width: 20 }} />
-                    <MyButton text='Excluir' color='danger' size='small' onPress={() => handleExcluir(contato)} />
+                    <MyButton color='danger' size='small' onPress={() => handleExcluir(contato)}>Excluir</MyButton>
                 </View>
             </View>
         );
@@ -97,7 +97,7 @@ function Listar({ navigation }) {
             />
             {mensagem}
             <View style={btAtualizar.view}>
-                <MyButton text='Atualizar' color='success' onPress={() => carregar()} disabled={carregando} />
+                <MyButton color='success' onPress={() => carregar()} disabled={carregando}>Atualizar</MyButton>
             </View>
         </SafeAreaView>
     );

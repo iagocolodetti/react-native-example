@@ -33,7 +33,7 @@ function Cadastrar() {
     function customAlert(message, alert) {
         return (
             <View style={{ marginTop: 10 }}>
-                <CustomAlert message={message} alert={alert} />
+                <CustomAlert alert={alert}>{message}</CustomAlert>
             </View>
         );
     }
@@ -74,7 +74,7 @@ function Cadastrar() {
             </View>
             {mensagem}
             <View style={btCadastrar.view}>
-                <MyButton text='Cadastrar' color='success' onPress={() => cadastrar()} disabled={cadastrando || !nome || !telefone || !email} />
+                <MyButton color='success' onPress={() => cadastrar()} disabled={cadastrando || !nome || !telefone || !email}>Cadastrar</MyButton>
             </View>
         </SafeAreaView>
     );

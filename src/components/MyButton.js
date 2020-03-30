@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 
 function MyButton(props) {
     const {
-        text,
+        children,
         color,
         size,
         height,
@@ -86,7 +86,7 @@ function MyButton(props) {
     return (
         <TouchableOpacity onPress={onPress} disabled={disabled}>
             <View style={styles.view}>
-                <Text style={styles.text}>{text}</Text>
+                <Text style={styles.text}>{children}</Text>
             </View>
         </TouchableOpacity>
     );
